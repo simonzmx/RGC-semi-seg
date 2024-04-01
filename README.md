@@ -1,4 +1,4 @@
-# GC-semi-seg
+# RGC-semi-seg
 
 This is the repository for our work "Retinal Ganglion Cell Identification in 3D AO-OCT Volumes with Semi-supervised Learning".
 
