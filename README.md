@@ -1,5 +1,5 @@
 # RGC-semi-seg
 
-This is the repository for our work "Retinal Ganglion Cell Identification in 3D AO-OCT Volumes with Semi-supervised Learning".
+This is the repository for our work "Reducing Manual Labeling Requirements and Improved Retinal Ganglion Cell Identification in 3D AO-OCT Volumes Using Semi-supervised Learning".
 
-Code will be released upon the acceptance of the paper.
+We are cleaning up the code and will release it soon.
