@@ -1,0 +1,84 @@
+# --- important ---
+label_usage_ratio: 1.00  # (deprecated) ratio of the labeled subjects that will be used for supervised training
+sparse_labels: False  # (deprecated) use full volume labels of those selected subjects
+# subject No. for IU dataset:
+# [3T, 8T, 13T]: 053, 116, 125, 127, 154
+# [3T, 13T]: 129, 155, 172
+all_subjects: ["053", "116", "125", "127", "154", "129", "155", "172"]
+
+# Fold 1: test053_val116
+test_subjects: ["053"]
+val_subjects: ["116"]
+#train_labeled_subjects: ["129", "172", "125", "154", "155", "127", "116"]  # 7/7
+#train_labeled_subjects: ["129", "172", "125", "154", "155"]  # 5/7
+#train_labeled_subjects: ["129", "172", "125"]  # 3/7
+train_labeled_subjects: ["129"]  # 1/7
+
+# Fold 2: test116_val127
+#test_subjects: ["116"]
+#val_subjects: ["127"]
+#train_labeled_subjects: ["129", "172", "125", "154", "155", "127", "053"]  # 7/7
+#train_labeled_subjects: ["129", "172", "125", "154", "155"]  # 5/7
+#train_labeled_subjects: ["129", "172", "125"]  # 3/7
+#train_labeled_subjects: ["129"]  # 1/7
+
+# Fold 3: test125_val155
+#test_subjects: ["125"]
+#val_subjects: ["155"]
+#train_labeled_subjects: ["129", "172", "127", "154", "053", "155", "116"]  # 7/7
+#train_labeled_subjects: ["129", "172", "127", "154", "053"]  # 5/7
+#train_labeled_subjects: ["129", "172", "127"]  # 3/7
+#train_labeled_subjects: ["129"]  # 1/7
+
+# Fold 4: test127_val125
+#test_subjects: ["127"]
+#val_subjects: ["125"]
+#train_labeled_subjects: ["129", "172", "116", "154", "155", "125", "053"]  # 7/7
+#train_labeled_subjects: ["129", "172", "116", "154", "155"]  # 5/7
+#train_labeled_subjects: ["129", "172", "116"]  # 3/7
+#train_labeled_subjects: ["129"]  # 1/7
+
+# Fold 5: test154_val127
+#test_subjects: ["154"]
+#val_subjects: ["127"]
+#train_labeled_subjects: ["129", "172", "125", "116", "155", "127", "053"]  # 7/7
+#train_labeled_subjects: ["129", "172", "125", "116", "155"]  # 5/7
+#train_labeled_subjects: ["129", "172", "125"]  # 3/7
+#train_labeled_subjects: ["129"]  # 1/7
+
+# Fold 6: test129_val053
+#test_subjects: ["129"]
+#val_subjects: ["053"]
+#train_labeled_subjects: ["125", "127", "155", "154", "116", "053", "172"] # 7/7
+#train_labeled_subjects: ["125", "127", "155", "154", "116"] # 5/7
+#train_labeled_subjects: ["125", "127", "155"] # 3/7
+#train_labeled_subjects: ["125"] # 1/7
+
+# Fold 7: test155_val154
+#test_subjects: ["155"]
+#val_subjects: ["154"]
+#train_labeled_subjects: ["129", "172", "125", "127", "053", "154", "116"]  # 7/7
+#train_labeled_subjects: ["129", "172", "125", "127", "053"]  # 5/7
+#train_labeled_subjects: ["129", "172", "125"]  # 3/7
+#train_labeled_subjects: ["129"]  # 1/7
+
+# Fold 8: test172_val129
+#test_subjects: ["172"]
+#val_subjects: ["129"]
+#train_labeled_subjects: ["116", "155", "154", "053", "127", "125", "129"]  # 7/7
+#train_labeled_subjects: ["116", "155", "154", "053", "127"]  # 5/7
+#train_labeled_subjects: ["116", "155", "154"]  # 3/7
+#train_labeled_subjects: ["116"]  # 1/7
+
+root_dir: ./data/all  # data root path
+layer_seg_info: ./data/gc_layers_all.json  # layer segmentation information json file
+dataset: ["IU"]  # dataset names
+epoch_samples_train: 200  # number of training samples per epoch
+crop_size: [32, 120, 120]  # volume crop size
+window_size: [32, 256, 256]  # sliding window size when testing
+window_stride: [16, 128, 128]  # sliding window stride when testing
+normalizations: [null, null] # [73.9, 32.3]  # mean, std for normalization
+
+cell_radius: 2  # expand each manual marking to a small sphere
+voxel_resolution: [0.94, 0.97, 0.97]  # voxel resolution
+location_probs: {"3T": 2, "8T": 0, "12T": 5, "13T": 5}  # sample selection probabilities during training

@@ -1,0 +1,59 @@
+# --- important ---
+label_usage_ratio: 1.0  # (deprecated) ratio of the labeled voxels that will be used for supervised training
+sparse_labels: False  # (deprecated) use full volume labels of those selected subjects
+# subject No. for FDA Glaucoma dataset:
+# Subject 7365: "0916", "0932"
+# Subject 1541: "1113", "1127"
+# Subject 4179: "1207", "1224"
+# Subject 1733: "1230", "1243"
+# Subject 6497: "1431", "1449"
+
+all_subjects: ["0916", "0932", "1113", "1127", "1207", "1224", "1230", "1243", "1431", "1449"]
+
+# Fold 1: test1541_val7365
+#train_labeled_subjects: ["0932", "1207", "1224", "1230", "1243", "1431", "1449"]  # 4/4
+#train_labeled_subjects: ["1207", "1224", "1230", "1243"]  # 2/4
+train_labeled_subjects: ["1207", "1224"]  # 1/4
+test_subjects: ["1113", "1127"]
+val_subjects: ["0916"]
+
+# Fold 2: test1733_val7365
+#train_labeled_subjects: ["0932", "1113", "1127", "1207", "1224", "1431", "1449"]  # 4/4
+#train_labeled_subjects: ["1431", "1449", "1113", "1127"]  # 2/4
+#train_labeled_subjects: ["1431", "1449"]  # 1/4
+#test_subjects: ["1230", "1243"]
+#val_subjects: ["0916"]
+
+# Fold 3: test4179_val1733
+#train_labeled_subjects: ["0916", "0932", "1113", "1127", "1243", "1431", "1449"]  # 4/4
+#train_labeled_subjects: ["0916", "0932", "1113", "1127"]  # 2/4
+#train_labeled_subjects: ["0916", "0932"]  # 1/4
+#test_subjects: ["1207", "1224"]
+#val_subjects: ["1230"]
+
+# Fold 4: test6497_val1541
+#train_labeled_subjects: ["0916", "0932", "1127", "1207", "1224", "1230", "1243"]  # 4/4
+#train_labeled_subjects: ["0916", "0932", "1127", "1207"]  # 2/4
+#train_labeled_subjects: ["0916", "0932"]  # 1/4
+#test_subjects: ["1431", "1449"]
+#val_subjects: ["1113"]
+
+# Fold 5: test7365_val6497
+#train_labeled_subjects: ["1113", "1127", "1207", "1224", "1230", "1243", "1449"]  # 4/4
+#train_labeled_subjects: ["1113", "1127", "1207", "1224"]  # 2/4
+#train_labeled_subjects: ["1113", "1127"]  # 1/4
+#test_subjects: ["0916", "0932"]
+#val_subjects: ["1431"]
+
+root_dir: ./data/all  # data root path
+layer_seg_info: ./data/gc_layers_all.json  # layer segmentation information json file
+dataset: ["FDA"]  # dataset names
+epoch_samples_train: 200  # number of training samples per epoch
+crop_size: [32, 120, 120]  # volume crop size
+window_size: [32, 256, 256]  # sliding window size when testing
+window_stride: [16, 128, 128]  # sliding window stride when testing
+normalizations: [null, null]  # mean, std for normalization. null to use mean and std of the volume itself.
+
+cell_radius: 2  # expand each manual marking to a small sphere
+voxel_resolution: [0.685, 1.5, 1.5]  # voxel resolution
+location_probs: {"3T": 2, "8T": 0, "12T": 5, "13T": 5}  # sample selection probabilities during training

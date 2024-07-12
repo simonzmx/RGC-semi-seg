@@ -1,0 +1,150 @@
+{
+	"FDA_0916_12T_Glaucoma": {
+		"min_z": 30,
+		"max_z": 67
+	},
+	"FDA_0932_12T_Glaucoma": {
+		"min_z": 29,
+		"max_z": 68
+	},
+	"FDA_0936_12T_Healthy": {
+		"min_z": 98,
+		"max_z": 132
+	},
+	"FDA_1029_12T_Healthy": {
+		"min_z": 39,
+		"max_z": 80
+	},
+	"FDA_1042_12T_Healthy": {
+		"min_z": 64,
+		"max_z": 125
+	},
+	"FDA_1113_12T_Glaucoma": {
+		"min_z": 38,
+		"max_z": 86
+	},
+	"FDA_1127_12T_Glaucoma": {
+		"min_z": 81,
+		"max_z": 128
+	},
+	"FDA_1207_12T_Glaucoma": {
+		"min_z": 36,
+		"max_z": 88
+	},
+	"FDA_1224_12T_Glaucoma": {
+		"min_z": 41,
+		"max_z": 85
+	},
+	"FDA_1230_12T_Glaucoma": {
+		"min_z": 39,
+		"max_z": 73
+	},
+	"FDA_1234_12T_Healthy": {
+		"min_z": 66,
+		"max_z": 113
+	},
+	"FDA_1243_12T_Glaucoma": {
+		"min_z": 41,
+		"max_z": 84
+	},
+	"FDA_1431_12T_Glaucoma": {
+		"min_z": 90,
+		"max_z": 126
+	},
+	"FDA_1449_12T_Glaucoma": {
+		"min_z": 33,
+		"max_z": 57
+	},
+	"FDA_1455_12T_Healthy": {
+		"min_z": 81,
+		"max_z": 135
+	},
+	"FDA_1512_12T_Healthy": {
+		"min_z": 88,
+		"max_z": 132
+	},
+	"IU_053_13T": {
+		"min_z": 147,
+		"max_z": 186
+	},
+	"IU_116_13T": {
+		"min_z": 106,
+		"max_z": 144
+	},
+	"IU_125_13T": {
+		"min_z": 75,
+		"max_z": 113
+	},
+	"IU_127_13T": {
+		"min_z": 157,
+		"max_z": 186
+	},
+	"IU_129_13T": {
+		"min_z": 130,
+		"max_z": 163
+	},
+	"IU_154_12T": {
+		"min_z": 27,
+		"max_z": 61
+	},
+	"IU_155_12T": {
+		"min_z": 30,
+		"max_z": 61
+	},
+	"IU_172_12T": {
+		"min_z": 132,
+		"max_z": 170
+	},
+	"IU_053_3T": {
+		"min_z": 112,
+		"max_z": 186
+	},
+	"IU_116_3T": {
+		"min_z": 40,
+		"max_z": 124
+	},
+	"IU_125_3T": {
+		"min_z": 100,
+		"max_z": 171
+	},
+	"IU_127_3T": {
+		"min_z": 77,
+		"max_z": 142
+	},
+	"IU_129_3T": {
+		"min_z": 102,
+		"max_z": 177
+	},
+	"IU_154_3T": {
+		"min_z": 30,
+		"max_z": 110
+	},
+	"IU_155_3T": {
+		"min_z": 24,
+		"max_z": 92
+	},
+	"IU_172_3T": {
+		"min_z": 94,
+		"max_z": 167
+	},
+	"IU_053_8T": {
+		"min_z": 21,
+		"max_z": 66
+	},
+	"IU_116_8T": {
+		"min_z": 34,
+		"max_z": 80
+	},
+	"IU_125_8T": {
+		"min_z": 36,
+		"max_z": 84
+	},
+	"IU_127_8T": {
+		"min_z": 36,
+		"max_z": 81
+	},
+	"IU_154_8T": {
+		"min_z": 26,
+		"max_z": 77
+	}
+}

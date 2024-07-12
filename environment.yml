@@ -1,0 +1,23 @@
+name: RGC-Semi-Seg
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.10
+  - pip=24.0
+  - pytorch=2.3.0
+  - torchvision=0.18.0
+  - pytorch-cuda=11.8
+  - pip:
+      - pyyaml==6.0.1
+      - numpy==1.26.4
+      - opencv-python==4.9.0.80
+      - Pillow==10.2.0
+      - scipy==1.13.0
+      - tqdm==4.65.2
+      - pandas==2.2.2
+      - scikit-image==0.23.2
+      - matplotlib==3.8.4
+      - tensorboard==2.16.2
+      - plotly==5.21.0

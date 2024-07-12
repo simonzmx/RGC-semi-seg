@@ -1,0 +1,45 @@
+# all parameters here by default are copied from the original WeakGCSeg paper.
+
+# --- model definition ---
+model_name: "WeakGCSeg"
+pretrained_path: null
+#random_seed: 1104
+
+model_save_path: "./weights/weak_gc_seg_fda_glaucoma_label1_test1541_v0.pth"
+#model_save_path: "./weights/weak_gc_seg_fda_glaucoma_label1_test1733_v0.pth"
+#model_save_path: "./weights/weak_gc_seg_fda_glaucoma_label1_test4179_v0.pth"
+#model_save_path: "./weights/weak_gc_seg_fda_glaucoma_label1_test6497_v0.pth"
+#model_save_path: "./weights/weak_gc_seg_fda_glaucoma_label1_test7365_v0.pth"
+
+# --- loss ---
+loss_weights: [0.002, 1]  # loss weights, [w_bg, w_gc], IU dataset
+
+# --- training settings ---
+train_type: "supervised"  # either "supervised" or "semi-supervised"
+sparse_labels: False  # use full volume labels of those selected subjects
+num_epochs: 100  # number of training epochs
+patience: null  # training patience
+metric: "ap" # metric to determine the best model on validation set, "loss" or "ap"
+
+# --- model settings ---
+num_classes: 2  # number of classes
+num_channels: 32  # number of channels for the first conv layer
+
+# --- optimizer ---
+mixed_precision: False  # use mixed precision for GPU efficiency, not necessary for WeakGCSeg
+optimizer_name: adam  # name of the optimizer, 'sgd' or 'adam'
+learning_rate: 0.001  # initial learning rate, IU dataset
+momentum: 0.9  # momentum for SGD or LARS
+weight_decay: 0 # weight decay
+max_norm: 1 # max_norm for gradient clipping
+
+lr_scheduler: null  # learning rate scheduler type, [null, "poly", "linear"]
+lr_decay_epochs: 100  # number of epochs for learning rate decreasing
+end_factor: 0.01
+
+# -------- post-processing parameters --------
+local_maxima_filter: [7, 3, 3]  # filter size for finding local maxima, FDA dataset
+median_filter: [3, 3, 3]  # filter size for median filter in the post-processing
+elongated_gaussian_filter: [1.6, 0.1, 0.1] # elongated Gaussian filter in the post-processing
+dis_thresholds: {"12T": 10.78}  # distance thresholds for performance measurements
+voxel_resolution: [0.685, 1.5, 1.5]  # voxel resolution
