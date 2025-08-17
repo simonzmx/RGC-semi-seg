@@ -2,8 +2,6 @@
 
 This is the repository for our paper [Reducing Manual Labeling Requirements and Improved Retinal Ganglion Cell Identification in 3D AO-OCT Volumes Using Semi-supervised Learning](https://opg.optica.org/boe/fulltext.cfm?uri=boe-15-8-4540&id=553141).
 
-We are currently adding more documentation.
-
 Please cite the papers listed at the end of this document if you use any component of this repository.
 
 ## Installation
@@ -66,4 +64,5 @@ Please cite the following papers if you use any component of this repository.
 Mengxi Zhou, Yue Zhang, Amin Karimi Monsefi, Stacey S. Choi, Nathan Doble, Srinivasan Parthasarathy, and Rajiv Ramnath, "Reducing manual labeling requirements and improved retinal ganglion cell identification in 3D AO-OCT volumes using semi-supervised learning," Biomed. Opt. Express 15, 4540-4556 (2024)
 
 Somayyeh Soltanian-Zadeh, Kazuhiro Kurokawa, Zhuolin Liu, Furu Zhang, Osamah Saeedi, Daniel X. Hammer, Donald T. Miller, and Sina Farsiu, "Weakly supervised individual ganglion cell segmentation from adaptive optics OCT images for glaucomatous damage assessment," Optica 8, 642-651 (2021)
+
 ```
